@@ -40,9 +40,6 @@ func teleportDone():
 	teleporting = false
 	$Quipper.makeQuip()
 
-func decideLocation() -> Vector2:
-	return Vector2()
-
 func set_playerDetectionRadius(var value):
 	playerDetectionRadius = value
 	update()

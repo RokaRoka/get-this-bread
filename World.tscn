@@ -4,14 +4,15 @@
 [ext_resource path="res://Bread/Bread.tscn" type="PackedScene" id=2]
 
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( -249.198, -61.4128, 948.741, -39.6042, 883.687, 628.79, -182.558, 651.004 )
+vertices = PoolVector2Array( -249.198, -61.4128, 951.773, -64.4129, 972.876, 627.456, -182.558, 651.004 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( -249.198, -61.4128, 948.741, -39.6042, 883.687, 628.79, -182.558, 651.004 ) ]
+outlines = [ PoolVector2Array( -249.198, -61.4128, 951.773, -64.4129, 972.876, 627.456, -182.558, 651.004 ) ]
 
-[node name="World" type="Node"]
+[node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 382.931, 262 )
+teleportDist = 72.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true

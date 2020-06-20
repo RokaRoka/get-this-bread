@@ -11,13 +11,13 @@
 script = ExtResource( 2 )
 playerDetectionRadius = 48.0
 
+[node name="Teleporter" parent="." instance=ExtResource( 4 )]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 3 )
-
-[node name="Teleporter" parent="." instance=ExtResource( 4 )]
 
 [node name="Quipper" type="Label" parent="."]
 margin_left = -72.5883

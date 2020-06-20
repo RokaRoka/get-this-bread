@@ -206,6 +206,10 @@ tracks/0/keys = {
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
+[node name="Teleporter" parent="." instance=ExtResource( 3 )]
+delay = 0.4
+lag = 0.2
+
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.384724, -5.54004 )
 texture = ExtResource( 1 )
@@ -229,6 +233,3 @@ anims/walkDown = SubResource( 10 )
 anims/walkLeft = SubResource( 11 )
 anims/walkRight = SubResource( 12 )
 anims/walkUp = SubResource( 13 )
-
-[node name="Teleporter" parent="." instance=ExtResource( 3 )]
-delay = 0.3
