@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Bread.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Bread/Bread.tscn" type="PackedScene" id=2]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( -249.198, -61.4128, 948.741, -39.6042, 883.687, 628.79, -182.558, 651.004 )
@@ -11,7 +11,7 @@ outlines = [ PoolVector2Array( -249.198, -61.4128, 948.741, -39.6042, 883.687, 6
 [node name="World" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 505, 262 )
+position = Vector2( 382.931, 262 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
@@ -22,8 +22,7 @@ editor_draw_drag_margin = true
 [node name="Bread" parent="." instance=ExtResource( 2 )]
 position = Vector2( 192, 256 )
 monitorable = false
-playerDetectionRadius = 48.0
-teleportDistance = 128.0
+teleportDistance = 112.0
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 

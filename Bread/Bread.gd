@@ -38,6 +38,7 @@ func _physics_process(delta):
 
 func teleportDone():
 	teleporting = false
+	$Quipper.makeQuip()
 
 func decideLocation() -> Vector2:
 	return Vector2()
