@@ -1,8 +1,29 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Bread.tscn" type="PackedScene" id=2]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 8, 8, 632, 8, 632, 472, 8, 472 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 8, 8, 632, 8, 632, 472, 8, 472 ) ]
 
 [node name="World" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 505, 262 )
+
+[node name="Bread" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192, 256 )
+monitorable = false
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+visible = false
+navpoly = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 304, 256 )
+current = true
+zoom = Vector2( 0.75, 0.75 )
