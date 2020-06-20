@@ -22,13 +22,15 @@ func _physics_process(delta):
 			# we want to teleport away from the player, if possible
 			var destination = Vector2()
 			var closestPoint = Vector2()
-			destination = -position.direction_to(player.position) * teleportDistance
-			closestPoint = nav2D.get_closest_point(destination)
-			if destination == closestPoint:
-				$Teleporter.goto(destination)
+			destination = -position.direction_to(player.position).normalized() * teleportDistance
+			closestPoint = nav2D.get_closest_point(position + destination)
+			if position + destination == closestPoint:
+				print("nyoom time")
+				$Teleporter.goto(closestPoint)
 				teleporting = true
 			else:
-				$Teleporter.goto(-destination)
+				print("I'm behind you :)")
+				$Teleporter.goto(-destination + position)
 				teleporting = true
 			# if we can't do that, we teleport behind the player
 			# if we can't do that, we teleport to the left
@@ -46,4 +48,5 @@ func set_playerDetectionRadius(var value):
 
 func _draw():
 	if Engine.editor_hint:
-		draw_arc(global_position, playerDetectionRadius, 0, 2 * PI, 64, Color.lightblue, 1.0)
+		draw_arc(Vector2(0, 0), playerDetectionRadius, 0, 2 * PI, 64, Color.lightblue, 1.0)
+		draw_arc(Vector2(0, 0), teleportDistance, 0, 2 * PI, 96, Color.lightpink, 1.0)

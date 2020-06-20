@@ -8,8 +8,8 @@
 
 [node name="Bread" type="Area2D"]
 script = ExtResource( 2 )
-playerDetectionRadius = 72.0
-teleportDistance = 96.0
+playerDetectionRadius = 48.0
+teleportDistance = 128.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

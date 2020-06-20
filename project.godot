@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Let's Get This Bread"
+run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
 [display]
