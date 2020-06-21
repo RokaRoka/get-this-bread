@@ -19,7 +19,7 @@ func goto(var location: Vector2):
 
 func _on_Timer_timeout():
 	var teleparticles = preload("res://General/TeleportParticles.tscn").instance()
-	get_tree().current_scene.add_child(teleparticles)
+	get_tree().current_scene.get_node("YSort").add_child(teleparticles)
 	teleparticles.position = get_parent().position
 	teleparticles.emitting = true
 	

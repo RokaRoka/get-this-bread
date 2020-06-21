@@ -29,7 +29,7 @@ func _physics_process(delta):
 			if destination + teleportVector == closestPoint and checkInBounds(closestPoint): # try away from player
 				print("nyoom time")
 				destination = closestPoint
-			else:
+			elif checkInBounds(position - teleportDistance):
 				print("I'm behind you :)")
 				destination -= teleportVector
 			#LMAO uh. if we hit else, teleport in place???? cool.

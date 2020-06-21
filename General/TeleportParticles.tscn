@@ -9,7 +9,6 @@ offsets = PoolRealArray( 0, 0.668103, 1 )
 colors = PoolColorArray( 0.517647, 0.180392, 0.623529, 0.513726, 0.54902, 0.298039, 0.627451, 0.752941, 1, 1, 1, 0.0980392 )
 
 [node name="TeleportParticles" type="CPUParticles2D"]
-z_index = -1
 emitting = false
 amount = 10
 lifetime = 0.7
