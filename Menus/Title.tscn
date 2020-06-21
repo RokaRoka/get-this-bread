@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://General/Fonts/poetsen_one/PoetsenOne-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://resources/Bread/BreadBoi.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.25098, 0.258824, 0.262745, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+shadow_size = 2
+
+[node name="Title" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.760784, 0.67451, 0.509804, 1 )
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+margin_top = 49.4738
+margin_bottom = 63.4738
+custom_fonts/font = SubResource( 1 )
+text = "Let's Get This Bread"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayBtn" type="Button" parent="."]
+margin_left = 194.549
+margin_top = 312.0
+margin_right = 274.549
+margin_bottom = 344.0
+custom_styles/normal = SubResource( 2 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsBtn" type="Button" parent="."]
+margin_left = 324.0
+margin_top = 312.0
+margin_right = 404.0
+margin_bottom = 344.0
+custom_styles/normal = SubResource( 2 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bread" type="TextureRect" parent="."]
+margin_left = 233.497
+margin_top = 139.762
+margin_right = 366.497
+margin_bottom = 272.762
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

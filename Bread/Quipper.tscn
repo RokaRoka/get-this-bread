@@ -1,7 +1,23 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Bread/Quipper.gd" type="Script" id=1]
 [ext_resource path="res://General/Fonts/biko/Biko_Regular.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.729412, 0.65098, 0.466667, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.243137, 0.156863, 0.0431373, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
 
 [sub_resource type="DynamicFont" id=1]
 size = 18
@@ -15,20 +31,20 @@ margin_right = 90.0
 margin_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 0
+custom_styles/panel = SubResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 7.0
+margin_left = 3.0
 margin_top = 7.0
-margin_right = 173.0
+margin_right = 177.0
 margin_bottom = 26.0
 grow_vertical = 0
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 0.392157 )
-custom_constants/shadow_as_outline = 2
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Haha Loser"
 align = 1
 valign = 2
