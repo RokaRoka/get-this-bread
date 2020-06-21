@@ -1,4 +1,4 @@
-extends Label
+extends PanelContainer
 
 var quips = [
 	"Catch me :)",
@@ -6,27 +6,32 @@ var quips = [
 	"You really are trying huh"
 ]
 
+var originalRect
 var quipping = false
 
 func _ready():
-	visible_characters = 0
+	originalRect = get_rect()
+	$Label.visible_characters = 0
 
 func makeQuip():
 	#reset timer and characters just in case
 	$StayTimer.stop()
-	visible_characters = 0
-	#get random quip
+	$Label.visible_characters = 0
+	#show, and get random quip
+	show()
 	var random = randi() % quips.size()
-	text = quips[random]
+	$Label.text = quips[random]
 	quipping = true
 
 func _physics_process(delta):
 	if quipping:
-		visible_characters += 1
-		if visible_characters >= get_total_character_count():
+		$Label.visible_characters += 1
+		if $Label.visible_characters >= $Label.get_total_character_count():
 			$StayTimer.start()
 			quipping = false
 
 
 func _on_StayTimer_timeout():
-	visible_characters = 0
+	$Label.visible_characters = 0
+	$Label.text = ""
+	hide()

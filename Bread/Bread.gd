@@ -8,11 +8,13 @@ var teleporting = false
 
 var nav2D: Navigation2D
 var player
+var quipper
 
 func _ready():
 	if !Engine.editor_hint:
 		nav2D = get_node("/root/World/Navigation2D")
 		player = get_node("/root/World/Player")
+		quipper = get_node("/root/World/GUI/Quipper")
 		$Teleporter.connect("teleport_finished", self, "teleportDone")
 
 func _physics_process(delta):
@@ -38,7 +40,7 @@ func _physics_process(delta):
 
 func teleportDone():
 	teleporting = false
-	$Quipper.makeQuip()
+	quipper.makeQuip()
 
 func set_playerDetectionRadius(var value):
 	playerDetectionRadius = value

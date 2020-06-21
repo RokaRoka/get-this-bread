@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bread/Bread.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Bread/Quipper.tscn" type="PackedScene" id=3]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( -249.198, -61.4128, 951.773, -64.4129, 972.876, 627.456, -182.558, 651.004 )
@@ -9,6 +10,19 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( -249.198, -61.4128, 951.773, -64.4129, 972.876, 627.456, -182.558, 651.004 ) ]
 
 [node name="World" type="Node2D"]
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="Quipper" parent="GUI" instance=ExtResource( 3 )]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -73.0
+margin_top = -34.0
+margin_right = 73.0
+margin_bottom = -20.0
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 382.931, 262 )

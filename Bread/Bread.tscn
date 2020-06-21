@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Bread/Quipper.gd" type="Script" id=1]
 [ext_resource path="res://Bread/Bread.gd" type="Script" id=2]
 [ext_resource path="res://resources/Bread/BreadBoi.png" type="Texture" id=3]
 [ext_resource path="res://General/Teleporter.tscn" type="PackedScene" id=4]
@@ -18,25 +17,3 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 3 )
-
-[node name="Quipper" type="Label" parent="."]
-margin_left = -72.5883
-margin_top = -27.7353
-margin_right = 73.4117
-margin_bottom = -13.7353
-grow_vertical = 0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 0.392157 )
-custom_constants/shadow_as_outline = 2
-text = "Haha Loser"
-align = 1
-valign = 2
-autowrap = true
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="StayTimer" type="Timer" parent="Quipper"]
-wait_time = 1.5
-one_shot = true
-[connection signal="timeout" from="Quipper/StayTimer" to="Quipper" method="_on_StayTimer_timeout"]
