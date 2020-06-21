@@ -3,7 +3,7 @@
 [ext_resource path="res://Bread/Quipper.gd" type="Script" id=1]
 [ext_resource path="res://General/Fonts/biko/Biko_Regular.otf" type="DynamicFontData" id=2]
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.729412, 0.65098, 0.466667, 1 )
 border_width_left = 3
 border_width_top = 3
@@ -19,7 +19,7 @@ expand_margin_right = 1.0
 expand_margin_top = 1.0
 expand_margin_bottom = 1.0
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 18
 use_filter = true
 font_data = ExtResource( 2 )
@@ -31,7 +31,7 @@ margin_right = 90.0
 margin_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 0
-custom_styles/panel = SubResource( 2 )
+custom_styles/panel = SubResource( 1 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -43,7 +43,7 @@ margin_top = 7.0
 margin_right = 177.0
 margin_bottom = 26.0
 grow_vertical = 0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Haha Loser"
 align = 1

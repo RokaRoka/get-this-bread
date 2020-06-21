@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const SPEED = 80
+const SPEED = 100
 
 var velocity = Vector2()
 
@@ -87,7 +87,9 @@ func startTeleport():
 			dir = Vector2.LEFT
 		"UL":
 			dir = Vector2.UP + Vector2.LEFT
+	$AudioStreamPlayer.play()
 	$Teleporter.goto(position + dir * teleportDist)
+	
 
 func teleportDone():
 	teleporting = false

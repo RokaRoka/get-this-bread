@@ -114,7 +114,6 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -176,12 +175,12 @@ __meta__ = {
 }
 
 [node name="VBoxArt" type="VBoxContainer" parent="Credits/Credits"]
-margin_left = 17.0
-margin_right = 192.0
-margin_bottom = 150.0
+margin_left = 223.0
+margin_right = 368.0
+margin_bottom = 149.0
 
 [node name="ArtTitle" type="Label" parent="Credits/Credits/VBoxArt"]
-margin_right = 175.0
+margin_right = 145.0
 margin_bottom = 19.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -193,24 +192,29 @@ __meta__ = {
 
 [node name="HSeparator" type="HSeparator" parent="Credits/Credits/VBoxArt"]
 margin_top = 23.0
-margin_right = 175.0
+margin_right = 145.0
 margin_bottom = 27.0
 
 [node name="Credit1" type="Label" parent="Credits/Credits/VBoxArt"]
 margin_top = 31.0
-margin_right = 175.0
-margin_bottom = 47.0
+margin_right = 145.0
+margin_bottom = 123.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Cool art by Person Name"
+text = "Kitchen and More
+by LimeZu
+
+Top Down Character
+by Gamekrazzy"
+align = 1
 
 [node name="VBoxFont" type="VBoxContainer" parent="Credits/Credits"]
-margin_left = 200.0
-margin_right = 375.0
-margin_bottom = 150.0
+margin_left = 376.0
+margin_right = 494.0
+margin_bottom = 149.0
 
 [node name="ArtTitle" type="Label" parent="Credits/Credits/VBoxFont"]
-margin_right = 175.0
+margin_right = 118.0
 margin_bottom = 19.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -222,28 +226,34 @@ __meta__ = {
 
 [node name="HSeparator" type="HSeparator" parent="Credits/Credits/VBoxFont"]
 margin_top = 23.0
-margin_right = 175.0
+margin_right = 118.0
 margin_bottom = 27.0
 
 [node name="Credit1" type="Label" parent="Credits/Credits/VBoxFont"]
 margin_top = 31.0
-margin_right = 175.0
-margin_bottom = 47.0
+margin_right = 118.0
+margin_bottom = 142.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Cool art by Person Name"
+text = "Biko
+by Marco Ugolini
+
+Poetsen One
+by Rodrigo
+Fuenzalida"
+align = 1
 
 [node name="VBoxSound" type="VBoxContainer" parent="Credits/Credits"]
-margin_left = 383.0
-margin_right = 558.0
-margin_bottom = 150.0
+margin_left = 502.0
+margin_right = 633.0
+margin_bottom = 149.0
 
 [node name="ArtTitle" type="Label" parent="Credits/Credits/VBoxSound"]
-margin_right = 175.0
+margin_right = 131.0
 margin_bottom = 19.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Sound"
+text = "Music"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -251,16 +261,18 @@ __meta__ = {
 
 [node name="HSeparator" type="HSeparator" parent="Credits/Credits/VBoxSound"]
 margin_top = 23.0
-margin_right = 175.0
+margin_right = 131.0
 margin_bottom = 27.0
 
 [node name="Credit1" type="Label" parent="Credits/Credits/VBoxSound"]
 margin_top = 31.0
-margin_right = 175.0
-margin_bottom = 47.0
+margin_right = 131.0
+margin_bottom = 66.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Cool art by Person Name"
+text = "Scheming Weasel 
+by Kevin MacLeod"
+align = 1
 
 [node name="BackBtn" type="Button" parent="Credits"]
 margin_left = 529.264

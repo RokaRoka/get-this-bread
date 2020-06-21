@@ -1,9 +1,21 @@
 extends PanelContainer
 
 var quips = [
-	"Catch me :)",
-	"Haha Loooooooooser",
-	"You really are trying huh"
+	
+	#pun time
+	"You knead to try harder than that.",
+	"This is getting pretty stale...",
+	"What are you loafing around for?",
+	"See if you can cross these hot buns.",
+	"Ooo I am on a roll.",
+	"At yeast make me try a little.",
+	"Your attempts are half-baked at best.",
+	"You are pretty crumby at this...",
+	"Is that your best?",
+	"Are you even trying?",
+	"Ha. Looooooooser.",
+	"Sometimes I get lonely at night...",
+	"All this running is turning my dough sour."
 ]
 
 var originalRect

@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
+[ext_resource path="res://resources/Sound Effect/Teleport.wav" type="AudioStream" id=1]
 [ext_resource path="res://Bread/Bread.gd" type="Script" id=2]
 [ext_resource path="res://resources/Bread/BreadBoi.png" type="Texture" id=3]
 [ext_resource path="res://General/Teleporter.tscn" type="PackedScene" id=4]
@@ -8,12 +9,17 @@
 
 [node name="Bread" type="Area2D"]
 script = ExtResource( 2 )
-playerDetectionRadius = 48.0
+playerDetectionRadius = 70.0
 
 [node name="Teleporter" parent="." instance=ExtResource( 4 )]
+delay = 0.3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_Bread_body_entered"]

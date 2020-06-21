@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://resources/TopDownCharacter/Character/Character.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
 [ext_resource path="res://General/Teleporter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://resources/Sound Effect/Teleport.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5.7509, 4.52578 )
@@ -205,10 +206,10 @@ tracks/0/keys = {
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
+teleportDist = 60.0
 
 [node name="Teleporter" parent="." instance=ExtResource( 3 )]
-delay = 0.4
-lag = 0.2
+delay = 0.2
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.384724, -5.54004 )
@@ -233,3 +234,6 @@ anims/walkDown = SubResource( 10 )
 anims/walkLeft = SubResource( 11 )
 anims/walkRight = SubResource( 12 )
 anims/walkUp = SubResource( 13 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
