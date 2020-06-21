@@ -1034,9 +1034,9 @@ tile_data = PoolIntArray( 589847, 6, 0, 589867, 6, 0, 655429, 536870917, 0, 6554
 position = Vector2( 151.553, 141.349 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
-visible = false
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+visible = false
 navpoly = SubResource( 92 )
 
 [node name="GUI" type="CanvasLayer" parent="."]

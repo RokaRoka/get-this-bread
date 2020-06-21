@@ -32,6 +32,12 @@ func _physics_process(delta):
 			elif checkInBounds(position - teleportVector):
 				print("I'm behind you :)")
 				destination -= teleportVector
+			elif checkInBounds(position - teleportVector.rotated(PI/2)):
+				print("On your right!")
+				destination -= teleportVector.rotated(PI/2)
+			elif checkInBounds(position - teleportVector.rotated(-PI/2)):
+				print("On your left!")
+				destination -= teleportVector.rotated(-PI/2)
 			#LMAO uh. if we hit else, teleport in place???? cool.
 			$AudioStreamPlayer.play()
 			$Teleporter.goto(destination)
