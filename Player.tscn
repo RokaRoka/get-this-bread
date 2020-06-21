@@ -233,3 +233,7 @@ anims/walkDown = SubResource( 10 )
 anims/walkLeft = SubResource( 11 )
 anims/walkRight = SubResource( 12 )
 anims/walkUp = SubResource( 13 )
+
+[node name="TeleportCast" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 25, 25 )
