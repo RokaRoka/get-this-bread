@@ -6,11 +6,15 @@ var teleportParticles
 
 var destination: Vector2
 export (float) var delay = 0.2
+export (float) var delayRandomVariance = 0.0
 export (float) var lag = 0.1
 
 func goto(var location: Vector2):
 	destination = location
-	$Timer.start(delay)
+	var delayVar
+	if delayRandomVariance > 0:
+		delayVar = delay + rand_range(-delayRandomVariance, delayRandomVariance)
+	$Timer.start(delayVar)
 
 
 func _on_Timer_timeout():

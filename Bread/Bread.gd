@@ -12,9 +12,9 @@ var quipper
 
 func _ready():
 	if !Engine.editor_hint:
-		nav2D = get_node("/root/Scene/Navigation2D")
-		player = get_node("/root/Scene/YSort/Player")
-		quipper = get_node("/root/Scene/GUI/Quipper")
+		nav2D = get_tree().current_scene.get_node("Navigation2D")
+		player = get_tree().current_scene.get_node("YSort/Player")
+		quipper = get_tree().current_scene.get_node("GUI/Quipper")
 		$Teleporter.connect("teleport_finished", self, "teleportDone")
 
 func _physics_process(delta):
@@ -22,23 +22,34 @@ func _physics_process(delta):
 		var distanceToPlayer =  player.position.distance_to(position)
 		if distanceToPlayer < playerDetectionRadius:
 			# we want to teleport away from the player, if possible
-			var destination = Vector2()
+			var destination = position
 			var closestPoint = Vector2()
-			destination = -position.direction_to(player.position).normalized() * teleportDistance
-			closestPoint = nav2D.get_closest_point(position + destination)
-			if position + destination == closestPoint:
-				#print("nyoom time")
-				$AudioStreamPlayer.play()
+			var teleportVector = -position.direction_to(player.position).normalized() * teleportDistance
+			closestPoint = nav2D.get_closest_point(teleportVector + position)
+			if destination + teleportVector == closestPoint and checkInBounds(closestPoint): # try away from player
+				print("nyoom time")
 				$Teleporter.goto(closestPoint)
 				teleporting = true
 			else:
-				#print("I'm behind you :)")
-				$AudioStreamPlayer.play()
-				$Teleporter.goto(-destination + position)
-				teleporting = true
-			# if we can't do that, we teleport behind the player
-			# if we can't do that, we teleport to the left
-			# if we can't do that, we teleport to the right
+				print("I'm behind you :)")
+				destination -= teleportVector
+			#LMAO uh. if we hit else, teleport in place???? cool.
+			$AudioStreamPlayer.play()			
+			$Teleporter.goto(destination)
+			teleporting = true
+
+func checkInBounds(var destination) -> bool:
+	var ground_tilemap:TileMap = get_tree().current_scene.get_node("Tiles+Walls")
+	var tilePos = ground_tilemap.world_to_map(destination)
+	var destTile = ground_tilemap.get_cell(tilePos.x, tilePos.y)
+	if destTile != TileMap.INVALID_CELL:
+		var destTileName = ground_tilemap.tile_set.tile_get_name(destTile)
+		if destTileName == "Walls":
+			return false
+		else:
+			return true
+	else:
+		return false
 
 func teleportDone():
 	teleporting = false
