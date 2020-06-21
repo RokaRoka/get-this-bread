@@ -4,9 +4,9 @@
 [ext_resource path="res://Bread/Bread.tscn" type="PackedScene" id=2]
 
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( -249.198, -61.4128, 948.741, -39.6042, 883.687, 628.79, -182.558, 651.004 )
+vertices = PoolVector2Array( 1.37491, -3.41789, 641.819, 4.33835, 640.711, 477.47, -0.841156, 483.01 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( -249.198, -61.4128, 948.741, -39.6042, 883.687, 628.79, -182.558, 651.004 ) ]
+outlines = [ PoolVector2Array( 1.37491, -3.41789, 641.819, 4.33835, 640.711, 477.47, -0.841156, 483.01 ) ]
 
 [node name="World" type="Node"]
 
@@ -15,7 +15,7 @@ position = Vector2( 382.931, 262 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
-zoom = Vector2( 0.75, 0.75 )
+zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
 editor_draw_drag_margin = true
 
@@ -27,5 +27,4 @@ teleportDistance = 112.0
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
-visible = false
 navpoly = SubResource( 1 )

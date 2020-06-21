@@ -11,8 +11,8 @@ var player
 
 func _ready():
 	if !Engine.editor_hint:
-		nav2D = get_node("/root/World/Navigation2D")
-		player = get_node("/root/World/Player")
+		nav2D = get_node("/root/Scene/Navigation2D")
+		player = get_node("/root/Scene/YSort/Player")
 		$Teleporter.connect("teleport_finished", self, "teleportDone")
 
 func _physics_process(delta):
