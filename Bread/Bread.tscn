@@ -9,10 +9,10 @@
 
 [node name="Bread" type="Area2D"]
 script = ExtResource( 2 )
-playerDetectionRadius = 70.0
+playerDetectionRadius = 75.0
 
 [node name="Teleporter" parent="." instance=ExtResource( 4 )]
-delay = 0.3
+delay = 0.2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -22,4 +22,5 @@ texture = ExtResource( 3 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
+volume_db = -10.0
 [connection signal="body_entered" from="." to="." method="_on_Bread_body_entered"]

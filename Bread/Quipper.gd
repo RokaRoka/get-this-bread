@@ -10,12 +10,25 @@ var quips = [
 	"Ooo I am on a roll.",
 	"At yeast make me try a little.",
 	"Your attempts are half-baked at best.",
-	"You are pretty crumby at this...",
+	"You're pretty crumby at this...",
 	"Is that your best?",
 	"Are you even trying?",
 	"Ha. Looooooooser.",
 	"Sometimes I get lonely at night...",
-	"All this running is turning my dough sour."
+	"All this running is turning my dough sour.",
+	"Yawn.",
+	"Booooring.",
+	"Have you ever even played a game before?",
+	"LOL",
+	"You're too slow!",
+	"You need to lay off the bread.",
+	"Someone's put on a little weight...",
+	"Is that all you got?",
+	"This is EZ-bake",
+	"My grandma runs faster than you and she's a loaf of bread.",
+	"Where is everyone?",
+	"You've activated my trap card!",
+	"Do you go out looking like that?"
 ]
 
 var originalRect
