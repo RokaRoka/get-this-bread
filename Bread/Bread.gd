@@ -29,7 +29,7 @@ func _physics_process(delta):
 			if destination + teleportVector == closestPoint and checkInBounds(closestPoint): # try away from player
 				print("nyoom time")
 				destination = closestPoint
-			elif checkInBounds(position - teleportDistance):
+			elif checkInBounds(position - teleportVector):
 				print("I'm behind you :)")
 				destination -= teleportVector
 			#LMAO uh. if we hit else, teleport in place???? cool.
@@ -67,3 +67,4 @@ func _draw():
 func _on_Bread_body_entered(body: Node) -> void:
 	if body.name == "Player":
 		print("You win!")
+		get_tree().current_scene.get_node("WinTransition").winGame()
