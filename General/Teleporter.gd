@@ -11,7 +11,7 @@ export (float) var lag = 0.1
 
 func goto(var location: Vector2):
 	destination = location
-	var delayVar
+	var delayVar = delay
 	if delayRandomVariance > 0:
 		delayVar = delay + rand_range(-delayRandomVariance, delayRandomVariance)
 	$Timer.start(delayVar)

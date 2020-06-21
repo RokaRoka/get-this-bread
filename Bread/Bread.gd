@@ -28,13 +28,12 @@ func _physics_process(delta):
 			closestPoint = nav2D.get_closest_point(teleportVector + position)
 			if destination + teleportVector == closestPoint and checkInBounds(closestPoint): # try away from player
 				print("nyoom time")
-				$Teleporter.goto(closestPoint)
-				teleporting = true
+				destination = closestPoint
 			else:
 				print("I'm behind you :)")
 				destination -= teleportVector
 			#LMAO uh. if we hit else, teleport in place???? cool.
-			$AudioStreamPlayer.play()			
+			$AudioStreamPlayer.play()
 			$Teleporter.goto(destination)
 			teleporting = true
 
