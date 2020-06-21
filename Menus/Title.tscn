@@ -55,7 +55,12 @@ levelPath = "res://Tilemap.tscn"
 [node name="BG" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 1.62903
+margin_right = 1.62903
 color = Color( 0.760784, 0.67451, 0.509804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
 anchor_right = 1.0
